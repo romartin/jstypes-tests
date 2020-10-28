@@ -1,7 +1,7 @@
 package org.roger600.jstypes.tests.client;
 
 import elemental2.dom.HTMLDivElement;
-import org.gwtproject.core.client.EntryPoint;
+import com.google.gwt.core.client.EntryPoint;
 
 import static elemental2.dom.DomGlobal.document;
 
