@@ -23,12 +23,14 @@
 
   <entry-point class="org.roger600.jstypes.tests.client.JSTypesTests" />
 
-  <set-property name="user.agent" value="gecko1_8,safari"/>
+  <set-property name="user.agent" value="safari"/>
   <set-property name="locale" value="default"/>
 
   <add-linker name="xsiframe"/>
   <set-configuration-property name="devModeRedirectEnabled" value="true"/>
   <set-property name="compiler.useSourceMaps" value="true"/>
+  <set-configuration-property name="includeSourceMapUrl"
+                              value="sourcemaps/__HASH___sourceMap__FRAGMENT__.json"/>
   
   <source path="client" />
   

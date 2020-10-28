@@ -178,7 +178,36 @@
               <strict>true</strict>
               <compileReport>true</compileReport>
               <saveSource>true</saveSource>
+              <style>PRETTY</style>
             </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>add-source-maps</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>war</goal>
+                </goals>
+                <configuration>
+                  <webResources>
+                    <resource>
+                      <directory>${basedir}/target/extra/org.roger600.jstypes.tests.JSTypesTests/src</directory>
+                      <targetPath>sourcemaps</targetPath>
+                    </resource>
+                    <resource>
+                      <directory>${basedir}/target/extra/org.roger600.jstypes.tests.JSTypesTests/symbolMaps</directory>
+                      <includes>
+                        <include>*.json</include>
+                      </includes>
+                      <targetPath>sourcemaps</targetPath>
+                    </resource>
+                  </webResources>
+                </configuration>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
       </build>
