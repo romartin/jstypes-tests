@@ -10,8 +10,13 @@ import static jsinterop.annotations.JsPackage.GLOBAL;
 @JsType(isNative = false, namespace = GLOBAL)
 public class JSTypeRoger1 {
 
+    public static JSTypeRoger1 create() {
+        return new JSTypeRoger1();
+    }
+
     @JsConstructor
-    public JSTypeRoger1() {}
+    public JSTypeRoger1() {
+    }
 
     @JsMethod
     public void alertaaaa() {
